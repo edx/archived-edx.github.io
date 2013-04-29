@@ -94,6 +94,6 @@ $visual-grid-opacity: 0.7;
 $visual-grid-index: front;
 
 // grid (neat-based) - responsive
-$bp-m: new-breakpoint(max-width 480px, 4);
-$bp-ds: new-breakpoint(min-width 480px max-width 780px, 6);
-$bp-dl: new-breakpoint(min-width 780px, 12);
+$bp-m: new-breakpoint(max-width 500px, 4);
+$bp-ds: new-breakpoint(min-width 500px max-width 760px, 6);
+$bp-dl: new-breakpoint(min-width 760px, 12);
