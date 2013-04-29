@@ -1,0 +1,142 @@
+// code.edx.org - Animations
+// ====================
+
+// rotate clockwise
+@mixin rotateCW {
+  0% {
+    @include transform(rotate(0deg));
+  }
+
+  50% {
+    @include transform(rotate(180deg));
+  }
+
+  100% {
+    @include transform(rotate(360deg));
+  }
+}
+
+@-moz-keyframes rotateCW { @include rotateCW(); }
+@-webkit-keyframes rotateCW { @include rotateCW(); }
+@-o-keyframes rotateCW { @include rotateCW(); }
+@keyframes rotateCW { @include rotateCW();}
+
+@mixin anim-rotateCW($duration, $timing: ease-in-out, $count: 1, $delay: 0) {
+  @include animation-name(rotateCW);
+  @include animation-duration($duration);
+  @include animation-delay($delay);
+  @include animation-timing-function($timing);
+  @include animation-iteration-count($count);
+  @include animation-fill-mode(both);
+}
+
+// ====================
+
+// rotate counter-clockwise
+@mixin rotateCCW {
+  0% {
+    @include transform(rotate(0deg));
+  }
+
+  50% {
+    @include transform(rotate(-180deg));
+  }
+
+  100% {
+    @include transform(rotate(-360deg));
+  }
+}
+
+@-moz-keyframes rotateCCW { @include rotateCCW(); }
+@-webkit-keyframes rotateCCW { @include rotateCCW(); }
+@-o-keyframes rotateCCW { @include rotateCCW(); }
+@keyframes rotateCCW { @include rotateCCW();}
+
+@mixin anim-rotateCCW($duration, $timing: ease-in-out, $count: 1, $delay: 0) {
+  @include animation-name(rotateCCW);
+  @include animation-duration($duration);
+  @include animation-delay($delay);
+  @include animation-timing-function($timing);
+  @include animation-iteration-count($count);
+  @include animation-fill-mode(both);
+}
+
+// ====================
+
+// bounce in
+@mixin bounceIn {
+  0% {
+    opacity: 0;
+    @include transform(scale(0.3));
+  }
+
+  50% {
+    opacity: 1;
+    @include transform(scale(1.05));
+  }
+
+  100% {
+    @include transform(scale(1));
+  }
+}
+
+@-moz-keyframes bounceIn { @include bounceIn(); }
+@-webkit-keyframes bounceIn { @include bounceIn(); }
+@-o-keyframes bounceIn { @include bounceIn(); }
+@keyframes bounceIn { @include bounceIn();}
+
+@mixin anim-bounceIn($duration, $timing: ease-in-out, $count: 1, $delay: 0) {
+  @include animation-name(bounceIn);
+  @include animation-duration($duration);
+  @include animation-delay($delay);
+  @include animation-timing-function($timing);
+  @include animation-iteration-count($count);
+  @include animation-fill-mode(both);
+}
+
+// ====================
+
+// bounce in
+@mixin bounceOut {
+  0% {
+    opacity: 0;
+    @include transform(scale(0.3));
+  }
+
+  50% {
+    opacity: 1;
+    @include transform(scale(1.05));
+  }
+
+  100% {
+    @include transform(scale(1));
+  }
+
+  0% {
+    @include transform(scale(1));
+  }
+
+  50% {
+    opacity: 1;
+    @include transform(scale(1.05));
+  }
+
+  100% {
+    opacity: 0;
+    @include transform(scale(0.3));
+  }
+}
+
+@-moz-keyframes bounceOut { @include bounceOut(); }
+@-webkit-keyframes bounceOut { @include bounceOut(); }
+@-o-keyframes bounceOut { @include bounceOut(); }
+@keyframes bounceOut { @include bounceOut();}
+
+@mixin anim-bounceOut($duration, $timing: ease-in-out, $count: 1, $delay: 0) {
+  @include animation-name(bounceOut);
+  @include animation-duration($duration);
+  @include animation-delay($delay);
+  @include animation-timing-function($timing);
+  @include animation-iteration-count($count);
+  @include animation-fill-mode(both);
+}
