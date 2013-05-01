@@ -162,9 +162,11 @@
     position: relative;
 
     .title {
+      @extend .trans-color;
       @extend .t-title-4;
       @include span-columns(12 of 12);
       font-weight: 600;
+      color: $gray-d2;
 
       .name {
         @extend .trans-size;
@@ -204,9 +206,11 @@
     }
 
     .copy {
+      @extend .trans-color;
       @extend .trans-size;
       @extend .t-copy-base;
       @include span-columns(8 of 12);
+      color: $gray;
 
       @include media($bp-ds) {
         @include fill-parent;
@@ -371,8 +375,17 @@
 
     &:hover {
 
-      .icon-gear {
-        @include anim-rotateCW(3s, linear, infinite);
+      .title {
+        color: $gray-d4;
+      }
+
+      .copy {
+        color: $gray-d1;
+      }
+
+      .ornament {
+        @include animation(spinCW 1.0s ease-in-out 0);
+        @include transform-origin(50% 40%);
       }
     }
   }

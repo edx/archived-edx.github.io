@@ -7,30 +7,35 @@
 @import 'vendor/vendor'; // vendor-provided
 @import 'utilities/reset'; // general reset
 
-// utilities
+
+// BASE  *out of the can edX offerings*
+// ====================
+
+// base - utilities
 @import 'utilities/variables';
 @import 'utilities/mixins';
-@import 'utilities/reset';
 
-// assets
-@import 'assets/fonts';
-@import 'assets/graphics';
-@import 'assets/anims';
+// base - assets
+@import 'assets/fonts'; // font imports/supporting files
+@import 'assets/graphics'; // sprites, basic img/figure/svg styling
+@import 'assets/anims'; // animations, keyframes
 
+// base - starter
 @import 'base';
 
-// elements
+// base - elements
 @import 'elements/typography';
-@import 'elements/icons';
-@import 'elements/controls';
-@import 'elements/navigation';
+@import 'elements/icons'; // references to icons used
+@import 'elements/controls'; // buttons, link styles, sliders, etc.
+@import 'elements/navigation'; // all archetypes of navigation
 @import 'elements/forms';
 @import 'elements/header';
 @import 'elements/footer';
-@import 'elements/alerts';
-@import 'elements/modal';
+@import 'elements/modal'; // interstitial UI, dialogs, modal windows
+@import 'elements/system-feedback'; // alerts, notifications, states
+@import 'elements/system-help'; // help UI
 
-// views
+// base-views
 @import 'views/index';
 
 // base - contextual

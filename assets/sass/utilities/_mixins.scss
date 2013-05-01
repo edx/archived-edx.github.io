@@ -112,3 +112,7 @@
 .trans-size {
   @include transition(width 0.25s ease-in-out, height 0.25s ease-in-out);
 }
+
+.trans-color {
+  @include transition(color 0.25s ease-in-out);
+}
