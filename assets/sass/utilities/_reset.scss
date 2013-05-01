@@ -1,6 +1,9 @@
 // code.edx.org - Reset
 // ====================
 
+// normalize
+@import '../css/vendor/normalize.css';
+
 * {
  @include box-sizing(border-box);
 }

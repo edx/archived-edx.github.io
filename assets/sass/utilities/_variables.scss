@@ -97,3 +97,9 @@ $visual-grid-index: front;
 $bp-m: new-breakpoint(max-width 500px, 4);
 $bp-ds: new-breakpoint(min-width 500px max-width 760px, 6);
 $bp-dl: new-breakpoint(min-width 760px, 12);
+
+// copy
+$cpy-pdf: 'This is a PDF Document';
+$cpy-ppt: 'This is a Power Point Document';
+$cpy-zip: 'This is a .zip file';
+$cpy-img: 'This is an image/graphic';

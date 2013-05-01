@@ -59,7 +59,7 @@
 
 // image-replacement hidden text
 .text-hide {
-  text-indent: 100%;
+  text-indent: 200%;
   white-space: nowrap;
   overflow: hidden;
 }
@@ -107,3 +107,8 @@
 .depth3 { z-index: 1000; }
 .depth4 { z-index: 10000; }
 .depth5 { z-index: 100000; }
+
+// extends - transition
+.trans-size {
+  @include transition(width 0.25s ease-in-out, height 0.25s ease-in-out);
+}
