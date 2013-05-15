@@ -1,0 +1,43 @@
+// code.edx.org - Base
+// ====================
+
+// basic
+html {
+  font-size: 62.5%;
+  overflow-y: scroll;
+}
+
+body {
+  @include font-size(16);
+  @extend .t-copy;
+}
+
+[class|="content"], footer.primary {
+
+  a {
+    @include transition(color 0.25s ease-in-out);
+    text-decoration: none;
+
+    &:link, &:visited {
+      color: $blue;
+    }
+
+    &:hover, &:active {
+      color: $blue-s2;
+    }
+  }
+}
+
+// layout
+[class|="wrapper"] {
+  @extend .wrapper;
+  padding: 0;
+
+  > * {
+    margin: 0 auto;
+  }
+}
+
+.sr, hr.divider {
+  @extend .text-sr;
+}

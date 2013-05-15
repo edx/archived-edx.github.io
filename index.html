@@ -1,102 +1,291 @@
-<html>
-  <head>
-    <title>edX code</title>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700' rel='stylesheet' type='text/css'>
-    <style>
-      body {
-        font-family: "Open Sans", sans-serif;
-      }
-      a {
-        color: #999;        
-      }
-      a:hover {
-        color: #333;
-      }
-      .container {
-        width: 960px;
-        margin: 50px auto;
-      }
-      h1, h2, h3 {
-        margin-top: 2em;
-        color: #1D9DD9;
-      }
-      .project h4 {
-        margin-bottom: 0;
-      }
-      .project .description {
-        font-style: italic;
-      }
-      .project .links {
-        font-size: 10pt;
-        color: #999;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <h1>edX code</h1>
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
 
-      <p>
-        EdX is a not-for-profit enterprise of its founding partners, the Massachusetts Institute of Technology (MIT) and Harvard University that offers online learning to on-campus students and to millions of people around the world. To do so, edX is building an open-source online learning platform and hosts an online web portal at www.edx.org for online education.
-      </p>
+  <title>edX Code</title>
+  <meta name="description" content="EdX is a not-for-profit enterprise of its founding partners, the Massachusetts Institute of Technology (MIT) and Harvard University that offers online learning to on-campus students and to millions of people around the world. To do so, edX is building an open-source online learning platform and hosts an online web portal at www.edx.org for online education.The entire edX learning platform will be released as open source on June 1, 2013. We are releasing some individual projects before that date to get feedback and encourage contribution.">
 
-      <p>
-        The entire edX learning platform will be released as open source on June 1, 2013. We are releasing some individual projects before that date to get feedback and encourage contribution.
-      </p>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
 
-      <h2>Open Source Projects</h2>
+  <link type="text/css" rel="stylesheet" href="assets/css/main.css" media="screen, projection">
+  <script type="text/javascript" src="assets/js/vendor/modernizr.min.js"></script>
+</head>
+<body class="view-index">
+  <div class="wrapper-view">
 
-      <p>
-        The edX platform is implemented in Python and the code is being made available under an AGPL license.
-      </p>
-
-      <p>
-        Some projects have their own mailing lists but there also exists a general list, <a href="http://groups.google.com/forum/#!forum/edx-code">edx-code</a>, for discussion about the edX code in general.
-      </p>
-
-      <h3>Core Projects</h3>
-
-      <div class="project">
-        <h4>XBlock</h4>
-        <div class="description">courseware component architecture</div>
-
-        <div class="links">
-          <a href="https://xblock.readthedocs.org/">docs</a>
-          &bull;
-          <a href="http://groups.google.com/forum/#!forum/edx-xblock">mailing list</a>
-          &bull;
-          <a href="https://github.com/edx/XBlock">github repository</a>
-        </div>
+    <div class="wrapper-mast">
+      <div class="wrapper-header">
+        <header class="primary" id="header-primary" role="banner">
+          <h1 class="title">edX Code</h1>
+        </header>
       </div>
 
-      <h3>Other Projects</h3>
+      <hr class="divider" />
 
-      <div class="project">
-        <h4>Another Project</h4>
-        <div class="description">description of the project</div>
+      <div class="wrapper-content-biography">
+        <section class="content-biography">
+          <h2 class="title sr">The History of edX Code</h2>
 
-        <div class="links">
-          <a href="#">docs</a>
-          &bull;
-          <a href="#">mailing list</a>
-          &bull;
-          <a href="#">github repository</a>
-        </div>
+          <div class="copy">
+            <p class="copy-background">EdX is a not-for-profit enterprise of its founding partners, the Massachusetts Institute of Technology (MIT) and Harvard University that <strong>offers online learning to on-campus students and to millions of people around the world</strong>.</p>
+
+            <p class="copy-lead">To do so, edX is building an open-source online learning platform and hosts an online web portal at <a href="http://wwwedx.org">www.edx.org</a> for online education.<strong>The entire edX learning platform will be released as open source on June 1, 2013</strong>. We are releasing some individual projects before that date to get feedback and encourage contribution.</p>
+          </div>
+        </section>
       </div>
-
-      <div class="project">
-        <h4>Yet Another Project</h4>
-        <div class="description">description of the project</div>
-
-        <div class="links">
-          <a href="#">docs</a>
-          &bull;
-          <a href="#">mailing list</a>
-          &bull;
-          <a href="#">github repository</a>
-        </div>
-      </div>
-
     </div>
-  </body>
+
+    <div class="wrapper-content-introduction">
+      <section class="content-introduction">
+        <h2 class="title sr">About edX Code</h2>
+
+         <div class="content-platform">
+          <h3 class="title"><i class="icon-code"></i> <span class="label">Working on the edX Platform</span></h3>
+
+          <div class="copy">
+            <p>The edX platform is implemented in <a rel="external" href="http://www.python.org/">Python</a> and the code is being made available under <a re="external" href="http://www.gnu.org/licenses/agpl.html">an AGPL license</a>.</p>
+
+            <p>Some projects have their own mailing lists but there also exists a general list, <a rel="external" href="http://groups.google.com/forum/#!forum/edx-code">edx-code</a>, for discussion about the edX code in general.</p>
+          </div>
+
+          <ul class="actions">
+            <li class="item"><a href="" class="action action-github"><i class="icon-github"></i>edX on Github</a></li>
+          </ul>
+        </div>
+
+        <div class="content-contribute">
+          <h3 class="title"><i class="icon-beaker"></i> <span class="label">Get Involved with edX's Code</span></h3>
+
+          <div class="copy">
+            <p>Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum. Donec id elit non mi porta gravida at eget metus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla.</p>
+          </div>
+
+          <ul class="actions">
+            <li class="item"><a href="" class="action action-docs"><i class="icon-copy"></i>Documentation &amp; Requirements</a></li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="wrapper-content-projects">
+      <section class="content-projects">
+        <h2 class="title">Current &amp; Planned Projects</h2>
+
+        <ol class="details-list">
+
+          <!-- xblock -->
+          <li class="item project xblock is-active">
+            <span class="ornament divide"><i class="icon-cog"></i></span>
+
+            <h3 class="title"><span class="name">Xblock</span><span class="status"><span class="label">Status:</span><span class="value">Active</span></span></h3>
+
+            <div class="copy">
+              <p>Xblock is courseware component architecture. Vestibulum id ligula porta felis euismod semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+            </div>
+
+            <nav class="resources">
+              <ul>
+                <li class="item docs">
+                  <a rel="external" href="https://xblock.readthedocs.org/">
+                    <span class="wrapper-icon">
+                      <i class="icon-file-alt"></i>
+                    </span>
+                    <span class="label">Documentation</span>
+                  </a>
+                </li>
+                <li class="item mailing-list">
+                  <a rel="external" href="http://groups.google.com/forum/#!forum/edx-xblock">
+                    <span class="wrapper-icon">
+                      <i class="icon-envelope"></i>
+                    </span>
+                    <span class="label">Mailing List</span>
+                  </a>
+                </li>
+                <li class="item github">
+                  <a rel="external" href="https://github.com/edx/XBlock">
+                    <span class="wrapper-icon">
+                      <i class="icon-github"></i>
+                    </span>
+                    <span class="label">Github Repository</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </li>
+
+          <!-- project NAME -->
+          <li class="item project projectx is-considered">
+            <span class="ornament divide"><i class="icon-cog"></i></span>
+
+            <h3 class="title"><span class="name">Another Project</span><span class="status"><span class="label">Status: </span><span class="value">Under Consideration</span></span></h3>
+
+            <div class="copy">
+              <p>Vestibulum id ligula porta felis euismod semper. Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+
+              <p>Vestibulum id ligula porta felis euismod semper. Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+            </div>
+
+            <nav class="resources">
+              <ul>
+                <li class="item docs">
+                  <a rel="external" href="">
+                    <span class="wrapper-icon">
+                      <i class="icon-file-alt"></i>
+                    </span>
+                    <span class="label">Documentation</span>
+                  </a>
+                </li>
+                <li class="item mailing-list">
+                  <a rel="external" href="">
+                    <span class="wrapper-icon">
+                      <i class="icon-envelope-alt"></i>
+                    </span>
+                    <span class="label">Mailing List</span>
+                  </a>
+                </li>
+                <li class="item github">
+                  <a rel="external" href="">
+                    <span class="wrapper-icon">
+                      <i class="icon-github"></i>
+                    </span>
+                    <span class="label">Github Repository</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </li>
+
+          <!-- project NAME -->
+          <li class="item project projectx is-planned">
+            <span class="ornament divide"><i class="icon-cog"></i></span>
+
+            <h3 class="title"><span class="name">Another Project</span><span class="status"><span class="label">Status: </span><span class="value">In Planning</span></span></h3>
+
+            <div class="copy">
+              <p>Vestibulum id ligula porta felis euismod semper. Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+            </div>
+
+
+            <nav class="resources">
+              <ul>
+                <li class="item docs">
+                  <a rel="external" href="">
+                    <span class="wrapper-icon">
+                      <i class="icon-file-alt"></i>
+                    </span>
+                    <span class="label">Documentation</span>
+                  </a>
+                </li>
+                <li class="item mailing-list">
+                  <a rel="external" href="">
+                    <span class="wrapper-icon">
+                      <i class="icon-envelope-alt"></i>
+                    </span>
+                    <span class="label">Mailing List</span>
+                  </a>
+                </li>
+                <li class="item github">
+                  <a rel="external" href="">
+                    <span class="wrapper-icon">
+                      <i class="icon-github"></i>
+                    </span>
+                    <span class="label">Github Repository</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </li>
+
+          <!-- project NAME -->
+          <li class="item project projectx is-inactive">
+            <span class="ornament divide"><i class="icon-cog"></i></span>
+
+            <h3 class="title"><span class="name">Another Project with a Really Long Name Goes Here and Continues On and On Until the Page is Very Very Very Long. Jeez!</span><span class="status"><span class="label">Status: </span><span class="value">Inactive</span></span></h3>
+
+            <div class="copy">
+              <p>Vestibulum id ligula porta felis euismod semper. Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+            </div>
+
+            <nav class="resources">
+              <ul>
+                <li class="item docs">
+                  <a rel="external" href="">
+                    <span class="wrapper-icon">
+                      <i class="icon-file-alt"></i>
+                    </span>
+                    <span class="label">Documentation</span>
+                  </a>
+                </li>
+                <li class="item mailing-list">
+                  <a rel="external" href="">
+                    <span class="wrapper-icon">
+                      <i class="icon-envelope-alt"></i>
+                    </span>
+                    <span class="label">Mailing List</span>
+                  </a>
+                </li>
+                <li class="item github">
+                  <a rel="external" href="">
+                    <span class="wrapper-icon">
+                      <i class="icon-github"></i>
+                    </span>
+                    <span class="label">Github Repository</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </li>
+        </ol>
+      </section>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="wrapper-content-supplementary">
+      <section class="content-supplementary">
+        <h2 class="sr">More Information About edX Code</h2>
+
+        <div class="content-contact">
+          <h3 class="title"><i class="icon-question-sign"></i>Questions &amp; Feedback</h3>
+
+          <div class="copy">
+            <p>Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum. Donec id elit non mi porta gravida at eget metus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla.</p>
+          </div>
+
+          <ul class="actions">
+            <li class="item"><a href="" class="action action-suggest"><i class="icon-comment"></i>Share a Suggestion</a></li>
+            <li class="item"><a href="mailto:code@edx.org" class="action action-email"><i class="icon-envelope-alt"></i>Email code@edx.org</a></li>
+          </ul>
+        </div>
+
+      </section>
+    </div>
+
+    <div class="wrapper-footer">
+      <footer class="primary" id="footer-primary" role="contentinfo">
+        <div class="copyright">
+          <p class="copy">&copy; 2013 <a href="http://www.edx.org">edX</a>. All rights reserved.</p>
+        </div>
+
+        <nav class="peripheral">
+          <ol>
+            <li class="item nav-peripheral-tos"><a href="">Terms of Service</a></li>
+            <li class="item nav-peripheral-pp"><a href="">Privacy Policy</a></li>
+            <li class="item nav-peripheral-contact"><a href="">Contact edX</a></li>
+          </ol>
+        </nav>
+      </footer>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="assets/js/vendor/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/js/main.min.js"></script>
+</body>
 </html>

@@ -1,0 +1,618 @@
+// code.edx.org - Index View
+// ====================
+
+.view-index {
+
+  // grid
+  .wrapper-view {
+    padding: 0;
+    background: $white;
+  }
+
+  .wrapper-header,
+  .wrapper-content-biography,
+  .wrapper-content-introduction,
+  .wrapper-content-supplementary,
+  .wrapper-content-projects,
+  .wrapper-footer {
+    @include outer-container;
+    @include pad(($baseline*2) ($baseline*3));
+  }
+
+  header.primary,
+  .content-biography,
+  .content-introduction,
+  .content-projects,
+  .content-supplementary,
+  footer.primary {
+    @include span-columns(12);
+  }
+
+  // general
+  .title {
+    margin-bottom: ($baseline/2);
+    color: $gray-d4;
+  }
+
+  .copy {
+    color: $gray-d2;
+
+    p {
+      margin-bottom: $baseline;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  // masthead
+  .wrapper-mast {
+    @include transition(background 1s ease-in-out);
+    box-shadow: inset 0 -1px 1px 0 $shadow;
+    position: relative;
+    padding: ($baseline) 0;
+    border-bottom: 1px solid $black;
+    background: $blue-d5 url('../images/bg-mast.png') 0 0 repeat;
+
+    &:hover {
+      background-color: $black;
+
+      .content-biography .copy-lead {
+        border-color: $gray-d4;
+      }
+    }
+
+    @include media($bp-m) {
+      padding: $baseline 0;
+    }
+  }
+
+  // primary header
+  .wrapper-header {
+    padding-bottom: 0;
+
+    header.primary {
+
+      .title {
+        @extend .trans-size;
+        @extend .text-hide;
+        @include size(450 116);
+        box-shadow: 0 2px 2px 1px $black;
+        margin: 0 auto;
+        background: transparent url('../images/logo-edx-code.png') 0 0 no-repeat;
+
+        @include media($bp-m) {
+          @include size(280 73);
+          background-image: url('../images/logo-edx-code-s.png');
+        }
+      }
+    }
+  }
+
+  // content - biography
+  .wrapper-content-biography {
+
+    .content-biography {
+
+      .title {
+
+      }
+
+      .copy {
+        @extend .trans-size;
+        @extend .depth2;
+        @extend .t-copy-lead1;
+        @include span-columns(10 of 12);
+        @include shift(1);
+        color: $gray-l4;
+        text-align: center;
+
+        @include media($bp-m) {
+          @include fill-parent;
+          @include shift(0);
+          @include font-size(14);
+          @include lh(14);
+          text-align: left;
+        }
+      }
+
+      .copy-lead {
+        @include transition(border 1s ease-in-out);
+        border-top: 1px dotted $blue-d5;
+        padding-top: ($baseline*0.75);
+      }
+    }
+  }
+
+  // content - introduction
+  .wrapper-content-introduction {
+    border-bottom: ($baseline/10) solid $gray-l5;
+
+    [class^="content"] {
+      @extend .trans-size;
+
+      .title {
+        @extend .t-title-4;
+        font-weight: 600;
+        color: $gray-d2;
+
+        @include media($bp-m) {
+          @include font-size(18);
+          @include lh(18);
+        }
+
+        [class^="icon"] {
+          margin-right: ($baseline/4);
+        }
+      }
+
+      .copy {
+        @extend .t-copy-base;
+        color: $gray;
+
+        @include media($bp-m) {
+          @include fill-parent;
+          @include font-size(14);
+          @include lh(14);
+        }
+      }
+
+      .actions {
+        margin-top: $baseline;
+
+        .action {
+
+          [class^="icon"] {
+            @extend .t-icon-l;
+            margin-right: ($baseline/2);
+          }
+        }
+
+        .action-github {
+          @extend .btn-primary-blue;
+        }
+
+        .action-docs {
+          @extend .btn-primary-pink;
+        }
+      }
+    }
+
+    .content-platform {
+      @include span-columns(6 of 12);
+
+      @include media($bp-ds) {
+        @include fill-parent;
+        margin-bottom: ($baseline*2);
+      }
+
+      @include media($bp-m) {
+        @include fill-parent;
+        margin-bottom: ($baseline*2);
+      }
+    }
+
+    .content-contribute {
+      @include span-columns(6 of 12);
+
+      @include media($bp-ds) {
+        @include fill-parent;
+      }
+
+      @include media($bp-m) {
+        @include fill-parent;
+      }
+    }
+  }
+
+  // content - projects
+  .wrapper-content-projects {
+
+    .content-projects {
+
+      > .title {
+        @extend .t-title-8;
+        text-transform: uppercase;
+        color: $gray-l3;
+      }
+
+      .details-list {
+
+        > .item {
+          margin-bottom: ($baseline*2);
+          border-bottom: 1px solid $gray-l5;
+          padding-bottom: ($baseline*2);
+
+          &:last-child {
+            margin-bottom: 0;
+            border-bottom: none;
+            padding-bottom: 0;
+
+            .ornament {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // elem - project
+  .project {
+    @include span-columns(12 of 12);
+    position: relative;
+
+    .title {
+      @extend .trans-color;
+      @extend .t-title-4;
+      @include span-columns(12 of 12);
+      font-weight: 600;
+      color: $gray-d2;
+
+      .name {
+        @extend .trans-size;
+        @include span-columns(8 of 12);
+
+        @include media($bp-m) {
+          @include font-size(18);
+          @include lh(18);
+          @include fill-parent;
+          margin-bottom: ($baseline/4);
+        }
+      }
+
+      .status {
+        @extend .t-copy-sub3;
+        @include span-columns(4 of 12);
+        text-align: right;
+        text-transform: uppercase;
+        font-weight: 600;
+
+        @include media($bp-m) {
+          display: none;
+        }
+
+        .label {
+          @extend .text-sr;
+        }
+
+        .value {
+          box-shadow: inset 1px 1px 1px 0 $shadow;
+          border-radius: ($baseline/10);
+          display: inline-block;
+          padding: ($baseline/4) ($baseline/2);
+          background: $gray-l3;
+          color: $white;
+          font-weight: 600;
+        }
+      }
+    }
+
+    .copy {
+      @extend .trans-color;
+      @extend .trans-size;
+      @extend .t-copy-base;
+      @include span-columns(8 of 12);
+      color: $gray;
+
+      @include media($bp-ds) {
+        @include fill-parent;
+        margin-bottom: ($baseline*2);
+      }
+
+      @include media($bp-m) {
+        @include fill-parent;
+        @include font-size(14);
+        @include lh(14);
+        margin-bottom: ($baseline*2);
+      }
+    }
+
+    .resources {
+      @extend .trans-size;
+      @include span-columns(4 of 12);
+
+      @include media($bp-ds) {
+        @include fill-parent;
+      }
+
+      @include media($bp-m) {
+        @include fill-parent;
+      }
+
+      .item {
+        @extend .t-copy-sub1;
+
+        a {
+          @include transition(background 0.25s ease-in-out);
+          background: $gray-l5;
+          display: block;
+
+          &:hover, &:active {
+            background: $blue-l2;
+            color: $white;
+          }
+
+          .wrapper-icon {
+            display: inline-block;
+            vertical-align: middle;
+            width: ($baseline*2.5);
+            margin-right: ($baseline/2);
+            padding: ($baseline*0.75);
+            background: $shadow-l2;
+            text-align: center;
+
+            [class^="icon-"] {
+              @extend .t-icon-l;
+            }
+          }
+
+          .label {
+            display: inline-block;
+            vertical-align: middle;
+            padding-right: $baseline;
+          }
+        }
+
+        &:first-child a {
+          border-top-left-radius: ($baseline/4);
+          border-top-right-radius:($baseline/4);
+        }
+
+        &:last-child a {
+          border-bottom-left-radius: ($baseline/4);
+          border-bottom-right-radius:($baseline/4);
+        }
+
+        // specific resource types
+        &.docs {
+
+          a {
+
+          }
+        }
+
+        &.mailing-list {
+
+          a {
+
+          }
+        }
+
+        &.github {
+
+          a {
+            box-shadow: inset 0 1px 1px 0 $shadow-l1;
+            background: $gray-l4;
+
+            &:hover, &:active {
+              box-shadow: inset 0 1px 2px 0 $shadow;
+              background: $blue;
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+
+    .ornament {
+      position: absolute;
+      bottom: -($baseline*0.75);
+      left: 50%;
+
+      @include media($bp-ds) {
+
+      }
+
+      @include media($bp-m) {
+        left: 40%;
+      }
+
+      [class^="icon-"] {
+        display: inline-block;
+        vertical-align: middle;
+        @include font-size(18);
+        background: $white;
+        padding: ($baseline/4) ($baseline/2);
+        color: $gray-l3;
+      }
+    }
+
+    // project status
+    &.is-active {
+
+      .status .value {
+        background: $blue;
+      }
+    }
+
+    &.is-planned {
+
+      .status .value {
+        background: $blue-l2;
+      }
+    }
+
+    &.is-considered {
+
+      .status .value {
+        background: $pink-l2;
+      }
+
+      .resources .item a {
+        color: $pink;
+
+        &:hover, &:active {
+          background: $pink-l2;
+          color: $white;
+        }
+      }
+
+      .resources .github a {
+
+        &:hover, &:active {
+          background: $pink;
+        }
+      }
+    }
+
+    &.is-inactive {
+
+      .status .value {
+        background: $gray-l3;
+      }
+
+      .resources .item a {
+        color: $gray;
+
+        &:hover, &:active {
+          background: $gray-l2;
+          color: $white;
+        }
+      }
+    }
+
+    &:hover {
+
+      .title {
+        color: $gray-d4;
+      }
+
+      .copy {
+        color: $gray-d1;
+      }
+
+      .ornament {
+        @include animation(spinCW 1.0s ease-in-out 0);
+      }
+    }
+  }
+
+  // content - supplementary
+  .wrapper-content-supplementary {
+    border-top: ($baseline/10) solid $gray-l5;
+    border-bottom: ($baseline/10) solid $gray-l5;
+
+    .content-supplementary {
+
+      .title {
+        @extend .t-title-4;
+        font-weight: 600;
+        color: $gray-d2;
+
+        [class^="icon"] {
+          margin-right: ($baseline/4);
+        }
+      }
+
+      .copy {
+        @extend .t-copy-sub1;
+      }
+
+      .content-contact {
+        @extend .trans-size;
+        @include fill-parent;
+
+        @include media($bp-ds) {
+          @include fill-parent;
+        }
+
+        @include media($bp-m) {
+          @include fill-parent;
+        }
+
+        .copy {
+          margin-bottom: $baseline;
+        }
+
+        .actions {
+          @include span-columns(6 of 12);
+
+          @include media($bp-m) {
+            @include fill-parent;
+          }
+
+          .item {
+            @extend .trans-size;
+            @extend .t-copy-sub1;
+            @include span-columns(3 of 6);
+            margin-bottom: ($baseline/2);
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            @include media($bp-m) {
+              @include fill-parent;
+            }
+
+            a {
+              @extend .btn-secondary;
+              display: block;
+
+              [class^="icon-"] {
+                @extend .t-icon-l;
+                margin-right: ($baseline/2);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // primary footer
+  .wrapper-footer {
+
+    footer.primary {
+      color: $gray-l2;
+
+      .copyright {
+        @extend .trans-size;
+        @extend .t-copy-sub1;
+        @include span-columns(3 of 12);
+
+        @include media($bp-ds) {
+          @include fill-parent;
+          margin-bottom: ($baseline/2);
+        }
+
+        @include media($bp-m) {
+          @include fill-parent;
+          margin-bottom: ($baseline/2);
+        }
+      }
+
+      nav.peripheral {
+        @extend .trans-size;
+        @extend .t-copy-sub1;
+        @include span-columns(9 of 12);
+        text-align: right;
+
+        @include media($bp-ds) {
+          @include fill-parent;
+          text-align: left;
+        }
+
+        @include media($bp-m) {
+          @include fill-parent;
+          text-align: left;
+        }
+
+        .item {
+          display: inline-block;
+          margin-right: $baseline;
+
+          &:last-child {
+            margin-right: 0;
+          }
+
+          @include media($bp-m) {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}

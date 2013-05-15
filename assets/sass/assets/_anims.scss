@@ -1,0 +1,22 @@
+// code.edx.org - Animations
+// ====================
+
+// spin clockwise
+@include keyframes(spinCW) {
+  from {
+    @include transform(rotate(0deg));
+  }
+  to {
+    @include transform(rotate(359deg));
+  }
+}
+
+// spin counter-clockwise
+@include keyframes(spinCCW) {
+  from {
+    @include transform(rotate(0deg));
+  }
+  to {
+    @include transform(rotate(-359deg));
+  }
+}
