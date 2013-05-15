@@ -41,3 +41,8 @@ body {
 .sr, hr.divider {
   @extend .text-sr;
 }
+
+// elements
+strong {
+  @extend .t-weight3;
+}

@@ -139,7 +139,7 @@
 
 // ====================
 
-// misc
+// icons
 .t-icon {
   line-height: 0;
 }
@@ -162,4 +162,24 @@
 .t-icon-xl {
   @extend .t-icon;
   @include font-size(36);
+}
+
+
+// ====================
+
+// misc
+.t-weight1 {
+  font-weight: 400;
+}
+
+.t-weight2 {
+  font-weight: 500;
+}
+
+.t-weight3 {
+  font-weight: 600;
+}
+
+.t-weight4 {
+  font-weight: 700;
 }
