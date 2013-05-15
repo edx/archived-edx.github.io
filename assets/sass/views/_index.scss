@@ -362,6 +362,13 @@
           color: $white;
         }
       }
+
+      .resources .github a {
+
+        &:hover, &:active {
+          background: $pink;
+        }
+      }
     }
 
     &.is-inactive {
