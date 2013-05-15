@@ -4,13 +4,16 @@
 // libs and resets *do not edit*
 @import 'bourbon'; // lib - bourbon
 @import 'utilities/neat/neat'; // lib - neat
-@import 'vendor/vendor'; // vendor-provided
+
+
+// VENDOR + REBASE *referenced/used vendor presentation and reset*
+// ====================
+@import 'vendor/normalize'; // normalize
 @import 'utilities/reset'; // general reset
 
 
-// BASE  *out of the can edX offerings*
+// BASE  *default edX offerings*
 // ====================
-
 // base - utilities
 @import 'utilities/variables';
 @import 'utilities/mixins';

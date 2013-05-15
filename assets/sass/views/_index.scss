@@ -319,7 +319,10 @@
         left: 40%;
       }
 
-      .icon {
+      [class^="icon-"] {
+        display: inline-block;
+        vertical-align: middle;
+        @include font-size(18);
         background: $white;
         padding: ($baseline/4) ($baseline/2);
         color: $gray-l3;
@@ -385,7 +388,6 @@
 
       .ornament {
         @include animation(spinCW 1.0s ease-in-out 0);
-        @include transform-origin(50% 40%);
       }
     }
   }
