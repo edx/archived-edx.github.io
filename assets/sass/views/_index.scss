@@ -248,15 +248,23 @@
             color: $white;
           }
 
-          .icon {
-            @extend .t-icon-l;
+          .wrapper-icon {
             display: inline-block;
-            padding: ($baseline*1.25) $baseline;
+            vertical-align: middle;
+            width: ($baseline*2.5);
+            margin-right: ($baseline/2);
+            padding: ($baseline*0.75);
             background: $shadow-l2;
+            text-align: center;
+
+            [class^="icon-"] {
+              @extend .t-icon-l;
+            }
           }
 
           .label {
             display: inline-block;
+            vertical-align: middle;
             padding-right: $baseline;
           }
         }
@@ -291,10 +299,6 @@
           a {
             box-shadow: inset 0 1px 1px 0 $shadow-l1;
             background: $gray-l4;
-
-            .icon {
-              background: $shadow-l1;
-            }
 
             &:hover, &:active {
               box-shadow: inset 0 1px 2px 0 $shadow;
@@ -460,8 +464,9 @@
               @extend .btn-secondary;
               display: block;
 
-              .icon {
+              [class^="icon-"] {
                 @extend .t-icon-l;
+                margin-right: ($baseline/2);
               }
             }
           }
