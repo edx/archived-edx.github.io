@@ -88,11 +88,6 @@ $min-width: 700px;
 $grid-columns: 12;
 $gutter: $baseline;
 
-$visual-grid: true;
-$visual-grid-color: $blue;
-$visual-grid-opacity: 0.7;
-$visual-grid-index: front;
-
 // grid (neat-based) - responsive
 $bp-m: new-breakpoint(max-width 500px, 4);
 $bp-ds: new-breakpoint(min-width 500px max-width 760px, 6);

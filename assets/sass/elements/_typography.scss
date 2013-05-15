@@ -156,5 +156,10 @@
 
 .t-icon-l {
   @extend .t-icon;
-  @include font-size(20);
+  @include font-size(24);
+}
+
+.t-icon-xl {
+  @extend .t-icon;
+  @include font-size(36);
 }

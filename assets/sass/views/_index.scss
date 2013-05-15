@@ -10,6 +10,7 @@
   }
 
   .wrapper-header,
+  .wrapper-content-biography,
   .wrapper-content-introduction,
   .wrapper-content-supplementary,
   .wrapper-content-projects,
@@ -19,6 +20,7 @@
   }
 
   header.primary,
+  .content-biography,
   .content-introduction,
   .content-projects,
   .content-supplementary,
@@ -49,14 +51,14 @@
     @include transition(background 1s ease-in-out);
     box-shadow: inset 0 -1px 1px 0 $shadow;
     position: relative;
-    padding: ($baseline*3) 0;
+    padding: ($baseline) 0;
     border-bottom: 1px solid $black;
     background: $blue-d5 url('../images/bg-mast.png') 0 0 repeat;
 
     &:hover {
       background-color: $black;
 
-      .content-introduction .copy-lead {
+      .content-biography .copy-lead {
         border-color: $gray-d4;
       }
     }
@@ -81,17 +83,17 @@
         background: transparent url('../images/logo-edx-code.png') 0 0 no-repeat;
 
         @include media($bp-m) {
-          @include size(225 58);
+          @include size(280 73);
           background-image: url('../images/logo-edx-code-s.png');
         }
       }
     }
   }
 
-  // content - introduction
-  .wrapper-content-introduction {
+  // content - biography
+  .wrapper-content-biography {
 
-    .content-introduction {
+    .content-biography {
 
       .title {
 
@@ -100,7 +102,7 @@
       .copy {
         @extend .trans-size;
         @extend .depth2;
-        @extend .t-copy-lead2;
+        @extend .t-copy-lead1;
         @include span-columns(10 of 12);
         @include shift(1);
         color: $gray-l4;
@@ -109,8 +111,8 @@
         @include media($bp-m) {
           @include fill-parent;
           @include shift(0);
-          @include font-size(16);
-          @include lh(16);
+          @include font-size(14);
+          @include lh(14);
           text-align: left;
         }
       }
@@ -119,7 +121,87 @@
         @include transition(border 1s ease-in-out);
         border-top: 1px dotted $blue-d5;
         padding-top: ($baseline*0.75);
+      }
+    }
+  }
+
+  // content - introduction
+  .wrapper-content-introduction {
+    border-bottom: ($baseline/10) solid $gray-l5;
+
+    [class^="content"] {
+      @extend .trans-size;
+
+      .title {
+        @extend .t-title-4;
         font-weight: 600;
+        color: $gray-d2;
+
+        @include media($bp-m) {
+          @include font-size(18);
+          @include lh(18);
+        }
+
+        [class^="icon"] {
+          margin-right: ($baseline/4);
+        }
+      }
+
+      .copy {
+        @extend .t-copy-base;
+        color: $gray;
+
+        @include media($bp-m) {
+          @include fill-parent;
+          @include font-size(14);
+          @include lh(14);
+        }
+      }
+
+      .actions {
+        margin-top: $baseline;
+
+        .action {
+
+          [class^="icon"] {
+            @extend .t-icon-l;
+            margin-right: ($baseline/2);
+          }
+        }
+
+        .action-github {
+          @extend .btn-primary-blue;
+        }
+
+        .action-docs {
+          @extend .btn-primary-pink;
+        }
+      }
+    }
+
+    .content-platform {
+      @include span-columns(6 of 12);
+
+      @include media($bp-ds) {
+        @include fill-parent;
+        margin-bottom: ($baseline*2);
+      }
+
+      @include media($bp-m) {
+        @include fill-parent;
+        margin-bottom: ($baseline*2);
+      }
+    }
+
+    .content-contribute {
+      @include span-columns(6 of 12);
+
+      @include media($bp-ds) {
+        @include fill-parent;
+      }
+
+      @include media($bp-m) {
+        @include fill-parent;
       }
     }
   }
@@ -173,8 +255,10 @@
         @include span-columns(8 of 12);
 
         @include media($bp-m) {
+          @include font-size(18);
+          @include lh(18);
           @include fill-parent;
-          margin-bottom: ($baseline/2);
+          margin-bottom: ($baseline/4);
         }
       }
 
@@ -219,6 +303,8 @@
 
       @include media($bp-m) {
         @include fill-parent;
+        @include font-size(14);
+        @include lh(14);
         margin-bottom: ($baseline*2);
       }
     }
@@ -411,33 +497,22 @@
     .content-supplementary {
 
       .title {
-        @extend .t-title-8;
-        text-transform: uppercase;
-        color: $gray-l3;
+        @extend .t-title-4;
+        font-weight: 600;
+        color: $gray-d2;
+
+        [class^="icon"] {
+          margin-right: ($baseline/4);
+        }
       }
 
       .copy {
         @extend .t-copy-sub1;
       }
 
-      .content-platform {
-        @extend .trans-size;
-        @include span-columns(6 of 12);
-
-        @include media($bp-ds) {
-          @include fill-parent;
-          margin-bottom: ($baseline*2);
-        }
-
-        @include media($bp-m) {
-          @include fill-parent;
-          margin-bottom: ($baseline*2);
-        }
-      }
-
       .content-contact {
         @extend .trans-size;
-        @include span-columns(6 of 12);
+        @include fill-parent;
 
         @include media($bp-ds) {
           @include fill-parent;
@@ -452,6 +527,11 @@
         }
 
         .actions {
+          @include span-columns(6 of 12);
+
+          @include media($bp-m) {
+            @include fill-parent;
+          }
 
           .item {
             @extend .trans-size;
