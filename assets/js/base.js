@@ -23,7 +23,7 @@ $(function() {
   $body.removeClass('no-js');
 
   // general link management - new window/tab
-  $('a[rel="external"]').attr('title', 'This link will open in a new browser window/tab').bind('click', linkNewWindow);
+  // $('a[rel="external"]').attr('title', 'This link will open in a new browser window/tab').bind('click', linkNewWindow);
 
   // general link management - smooth scrolling page links
   $('a[rel*="view"][href^="#"]').bind('click', smoothScrollLink);
