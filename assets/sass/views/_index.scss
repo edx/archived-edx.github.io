@@ -165,8 +165,14 @@
 
         .action {
 
+          @include media($bp-m) {
+            @include fill-parent;
+          }
+
           [class^="icon"] {
             @extend .t-icon-l;
+            position: relative;
+            top: ($baseline/10);
             margin-right: ($baseline/2);
           }
         }
@@ -347,6 +353,8 @@
 
             [class^="icon-"] {
               @extend .t-icon-l;
+              position: relative;
+              top: ($baseline/5);
             }
           }
 
