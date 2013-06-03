@@ -17,6 +17,10 @@
   .wrapper-footer {
     @include outer-container;
     @include pad(($baseline*2) ($baseline*3));
+
+    @include media($bp-m) {
+      @include pad(($baseline));
+    }
   }
 
   header.primary,
@@ -75,16 +79,14 @@
     header.primary {
 
       .title {
-        @extend .trans-size;
-        @extend .text-hide;
-        @include size(450 116);
-        box-shadow: 0 2px 2px 1px $black;
         margin: 0 auto;
-        background: transparent url('../images/logo-edx-code.png') 0 0 no-repeat;
+        text-align: center;
 
-        @include media($bp-m) {
-          @include size(280 73);
-          background-image: url('../images/logo-edx-code-s.png');
+        img {
+          @extend .trans-size;
+          max-width: 100%;
+          height: auto;
+          box-shadow: 0 2px 2px 1px $black;
         }
       }
     }
@@ -163,8 +165,14 @@
 
         .action {
 
+          @include media($bp-m) {
+            @include fill-parent;
+          }
+
           [class^="icon"] {
             @extend .t-icon-l;
+            position: relative;
+            top: ($baseline/10);
             margin-right: ($baseline/2);
           }
         }
@@ -345,6 +353,8 @@
 
             [class^="icon-"] {
               @extend .t-icon-l;
+              position: relative;
+              top: ($baseline/5);
             }
           }
 
