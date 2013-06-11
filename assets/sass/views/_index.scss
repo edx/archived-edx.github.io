@@ -237,6 +237,7 @@
 
   // content - projects
   .wrapper-content-projects {
+    @include pad(($baseline*2) ($baseline*3) ($baseline*3) ($baseline*3));
 
     .content-projects {
 
