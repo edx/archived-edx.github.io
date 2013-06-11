@@ -206,6 +206,7 @@
 
     .content-platform {
       @include span-columns(6 of 12);
+      padding: $baseline 0;
 
       @include media($bp-ds) {
         @include fill-parent;
@@ -220,6 +221,9 @@
 
     .content-contribute {
       @include span-columns(6 of 12);
+      box-shadow: inset 0 1px 1px 0 $shadow-l1;
+      @include pad($baseline $baseline*1.5);
+      background: $gray-l5;
 
       @include media($bp-ds) {
         @include fill-parent;
@@ -266,6 +270,7 @@
   // elem - project
   .project {
     @include span-columns(12 of 12);
+    @include transition (all 0.5s ease-in-out);
     position: relative;
 
     .title {
@@ -503,11 +508,11 @@
     &:hover {
 
       .title {
-        color: $gray-d4;
+        color: $black;
       }
 
       .copy {
-        color: $gray-d1;
+        color: $gray-d3;
       }
 
       .ornament {
@@ -517,14 +522,18 @@
   }
 
   // content - supplementary
+  .wrapper-outer-content-supplementary {
+    @include box-shadow(inset 0 1px 1px 1px $shadow-l1);
+    background: $gray-l6;
+  }
+
   .wrapper-content-supplementary {
-    border-top: ($baseline/10) solid $gray-l5;
-    border-bottom: ($baseline/10) solid $gray-l5;
 
     .content-supplementary {
 
       .title {
-        @extend .t-title-4;
+        @extend .t-title-7;
+        margin-bottom: ($baseline/4);
         font-weight: 600;
         color: $gray-d2;
 
@@ -540,14 +549,6 @@
       .content-contact {
         @extend .trans-size;
         @include fill-parent;
-
-        @include media($bp-ds) {
-          @include fill-parent;
-        }
-
-        @include media($bp-m) {
-          @include fill-parent;
-        }
 
         .copy {
           margin-bottom: $baseline;
@@ -586,14 +587,39 @@
           }
         }
       }
+
+      .list-content {
+
+        [class^="content-"] {
+          @extend .trans-size;
+          @include span-columns(4 of 12);
+
+          @include media($bp-ds) {
+            @include fill-parent;
+          }
+
+          @include media($bp-m) {
+            @include fill-parent;
+          }
+        }
+      }
     }
   }
 
   // primary footer
+  .wrapper-outer-footer {
+    @include box-shadow(inset 0 1px 1px 1px $shadow-l1);
+    background: $blue-d5 url('../images/bg-mast.png') 0 0 repeat;
+  }
+
   .wrapper-footer {
 
     footer.primary {
       color: $gray-l2;
+
+      .copy {
+        color: $gray-l4;
+      }
 
       .copyright {
         @extend .trans-size;
