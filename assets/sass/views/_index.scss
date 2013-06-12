@@ -12,14 +12,14 @@
   .wrapper-header,
   .wrapper-content-biography,
   .wrapper-content-introduction,
-  .wrapper-content-supplementary,
   .wrapper-content-projects,
+  .wrapper-content-supplementary,
   .wrapper-footer {
     @include outer-container;
     @include pad(($baseline*2) ($baseline*3));
 
     @include media($bp-m) {
-      @include pad(($baseline));
+      @include pad(($baseline) ($baseline*2));
     }
   }
 
@@ -131,6 +131,10 @@
   .wrapper-content-introduction {
     border-bottom: ($baseline/10) solid $gray-l5;
 
+    @include media($bp-m) {
+      @include pad(($baseline) ($baseline*2) ($baseline*2) ($baseline*2));
+    }
+
     [class^="content"] {
       @extend .trans-size;
 
@@ -237,7 +241,6 @@
 
   // content - projects
   .wrapper-content-projects {
-    @include pad(($baseline*2) ($baseline*3) ($baseline*3) ($baseline*3));
 
     .content-projects {
 
