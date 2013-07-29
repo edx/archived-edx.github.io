@@ -61,8 +61,7 @@
           <h3 class="title"><span class="label">How to Get Involved</span></h3>
 
           <div class="copy">
-            <p>We are particularly interested in people working on new XBlocks and new Graders as well as people who
-              can assist with internationalization and localization.
+            <p>We are particularly interested in people working on new XBlocks and new Checkers as well as people who can assist with internationalization and localization.
             </p>
             <p>Some projects have their own mailing list but there is also <a rel="external" href="http://groups.google.com/forum/#!forum/edx-code">edx-code</a>, for discussion about the edX code in general. Regardless of your particular interests, you should consider joining that mailing list.</p>
             <p>We also hang out in the #edx-code IRC channel on Freenode.</p>
@@ -94,7 +93,7 @@
               <p><strong>edx-platform</strong> is the main repository covering both the LMS and the authoring tool, Studio.</p>
 
               <p>
-                It also includes XModules (the courseware components that are being upgraded to the new XBlock architecture in the coming months) and various graders.
+                It also includes XModules (the courseware components that are being upgraded to the new XBlock architecture in the coming months) and various checkers.
               </p>
             </div>
 
@@ -398,7 +397,7 @@
 
             <div class="copy">
               <p>
-                <strong>XQueue</strong> defines an interface for the LMS to communicate with external grader services. For example, when a student submits a problem in the LMS, it gets sent to the XQueue. The XQueue then has the problem graded by an external service and sends the response back to the LMS.
+                <strong>XQueue</strong> defines an interface for the LMS to communicate with external checker services. For example, when a student submits a problem in the LMS, it gets sent to the XQueue. The XQueue then has the problem graded by an external service and sends the response back to the LMS.
               </p>
             </div>
 
@@ -424,7 +423,7 @@
 
             <div class="copy">
               <p>
-                <strong>XServer</strong> accepts student code submissions from the LMS and runs the code using courseware graders. This repo does not include the grader code.
+                <strong>XServer</strong> accepts student code submissions from the LMS and runs the code using courseware checkers. This repo does not include the checker code.
               </p>
             </div>
 
