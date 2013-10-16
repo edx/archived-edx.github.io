@@ -8,7 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
 
   <title>edX Code</title>
-  <meta name="description" content="Welcome to edX Code, where developers around the globe are working to create a next-generation online learning platform that will bring quality education to students around the world.">
+  <meta name="description" content="Welcome to edX's open source initiative, Open edX, where developers around the globe are working to create a next-generation online learning platform that will bring quality education to students around the world.">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
 
@@ -34,7 +34,7 @@
         <section class="content-biography">
           <div class="copy">
             <p class="copy-lead">
-              Welcome to edX Code, where developers around the globe are working to create a next-generation online learning platform that will bring quality education to students around the world.
+              Welcome to edX's open source initiative&mdash;Open edX&mdash;where developers around the globe are working to create a next-generation online learning platform that will bring quality education to students around the world.
             </p>
 
             <p class="copy-background">
@@ -51,9 +51,9 @@
           <h3 class="title"><span class="label">The Open edX Platform</span></h3>
 
           <div class="copy">
-            <p>The Open edX platform is implemented mostly in <strong>Python</strong> (with some Ruby and NodeJS as well) and the code is being made available under an AGPL license.</p>
+            <p>Open edX is implemented mostly in <strong>Python</strong> (with some Ruby and NodeJS as well) and the code is being made available under an AGPL license.</p>
             <p>The main repository is <strong>edx-platform</strong> which includes both the LMS and the authoring tool, Studio. We have a number of other repositories outlined below, some of which may be useful even outside of the main platform.</p>
-            <p>If you are interested in writing components for our next-generation component architecture, take a look at <strong>XBlock</strong>. If you are interested in our machine-learning-based grading see <strong>EASE</strong> and <strong>discern</strong>. If you are interested in analytics, start with <strong>edinsights</strong>. For our deployment and configuration tools, see <strong>configuration</strong>.</p>
+            <p>If you are interested in writing components for our next-generation component architecture, take a look at <strong>XBlock</strong>. If you are interested in our machine-learning-based grading see <strong>EASE</strong> and <strong>discern</strong>. If you are interested in analytics, start with <strong>insights</strong>. For our deployment and configuration tools, see <strong>configuration</strong>.</p>
           </div>
         </div>
 
@@ -109,6 +109,40 @@
                 </li>
                 <li class="item github">
                   <a rel="external" href="https://github.com/edx/edx-platform">
+                    <span class="wrapper-icon">
+                      <i class="icon-github"></i>
+                    </span>
+                    <span class="label">Github Repository</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </li>
+
+          <!-- configuration -->
+          <li class="item project projectx is-considered">
+            <span class="ornament divide"><i class="icon-cog"></i></span>
+
+            <h3 class="title"><span class="name">Configuration</span></h3>
+
+            <div class="copy">
+              <p><strong>Configuration</strong> provides a simple, but flexible, way for anyone to stand up an instance of the Open edX platform that is fully configured and ready-to-go.</p>
+              <p>The reference platform is provisioned using an Amazon CloudFormation template. When the stack has been fully created you will have a new AWS Virtual Private Cloud with hosts for the core edX services. This template will build quite a number of AWS resources that cost money, so please consider this before you start.</p>
+              <p>The configuration phase is managed by Ansible. We have provided a number of playbooks that will configure each of the edX service.</p>
+            </div>
+
+            <nav class="resources">
+              <ul>
+                <li class="item wiki">
+                  <a rel="external" href="https://github.com/edx/configuration/wiki">
+                    <span class="wrapper-icon">
+                      <i class="icon-pencil"></i>
+                    </span>
+                    <span class="label">Wiki</span>
+                  </a>
+                </li>
+                <li class="item github">
+                  <a rel="external" href="https://github.com/edx/configuration">
                     <span class="wrapper-icon">
                       <i class="icon-github"></i>
                     </span>
@@ -269,15 +303,15 @@
             </nav>
           </li>
 
-          <!-- edinsights -->
+          <!-- insights -->
           <li class="item project projectx is-active">
             <span class="ornament divide"><i class="icon-cog"></i></span>
 
-            <h3 class="title"><span class="name">edinsights</span></h3>
+            <h3 class="title"><span class="name">insights</span></h3>
 
             <div class="copy">
               <p>
-                <strong>edinsights</strong> is a development version of a Python+Mongo+Django framework for creating simple, pluggable analytics based on streaming events. It will eventually replace the ad-hoc analytics used in the edX platform currently.
+                <strong>insights</strong> is a development version of a Python+Mongo+Django framework for creating simple, pluggable analytics based on streaming events. It will eventually replace the ad-hoc analytics used in the edX platform currently.
               </p>
             </div>
 
@@ -292,7 +326,7 @@
                   </a>
                 </li>
                 <li class="item github">
-                  <a rel="external" href="https://github.com/edx/ed-insights">
+                  <a rel="external" href="https://github.com/edx/insights">
                     <span class="wrapper-icon">
                       <i class="icon-github"></i>
                     </span>
@@ -319,40 +353,6 @@
               <ul>
                 <li class="item github">
                   <a rel="external" href="https://github.com/edx/cs_comments_service">
-                    <span class="wrapper-icon">
-                      <i class="icon-github"></i>
-                    </span>
-                    <span class="label">Github Repository</span>
-                  </a>
-                </li>
-              </ul>
-            </nav>
-          </li>
-
-          <!-- configuration -->
-          <li class="item project projectx is-considered">
-            <span class="ornament divide"><i class="icon-cog"></i></span>
-
-            <h3 class="title"><span class="name">Configuration</span></h3>
-
-            <div class="copy">
-              <p><strong>Configuration</strong> provides a simple, but flexible, way for anyone to stand up an instance of the edX platform that is fully configured and ready-to-go.</p>
-              <p>The reference platform is provisioned using an Amazon CloudFormation template. When the stack has been fully created you will have a new AWS Virtual Private Cloud with hosts for the core edX services. This template will build quite a number of AWS resources that cost money, so please consider this before you start.</p>
-              <p>The configuration phase is managed by Ansible. We have provided a number of playbooks that will configure each of the edX service.</p>
-            </div>
-
-            <nav class="resources">
-              <ul>
-                <li class="item wiki">
-                  <a rel="external" href="https://github.com/edx/configuration/wiki">
-                    <span class="wrapper-icon">
-                      <i class="icon-pencil"></i>
-                    </span>
-                    <span class="label">Wiki</span>
-                  </a>
-                </li>
-                <li class="item github">
-                  <a rel="external" href="https://github.com/edx/configuration">
                     <span class="wrapper-icon">
                       <i class="icon-github"></i>
                     </span>
