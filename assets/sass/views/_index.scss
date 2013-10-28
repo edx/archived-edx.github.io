@@ -107,7 +107,7 @@
         @extend .t-copy-lead1;
         @include span-columns(10 of 12);
         @include shift(1);
-        color: $gray-l4;
+        color: $gray-l3;
         text-align: center;
 
         @include media($bp-m) {
@@ -123,6 +123,13 @@
         @include transition(border 1s ease-in-out);
         border-top: 1px dotted $blue-d5;
         padding-top: ($baseline*0.75);
+      }
+
+      .copy-acknowledgement {
+
+        strong {
+          color: $white;
+        }
       }
     }
   }
