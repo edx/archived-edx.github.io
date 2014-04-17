@@ -83,7 +83,7 @@
         text-align: center;
 
         img {
-          @extend .trans-size;
+          @extend %trans-size;
           max-width: 100%;
           height: auto;
           box-shadow: 0 2px 2px 1px $black;
@@ -102,9 +102,9 @@
       }
 
       .copy {
-        @extend .trans-size;
-        @extend .depth2;
-        @extend .t-copy-lead1;
+        @extend %trans-size;
+        @extend %depth2;
+        @extend %t-copy-lead1;
         @include span-columns(10 of 12);
         @include shift(1);
         color: $gray-l3;
@@ -143,10 +143,10 @@
     }
 
     [class^="content"] {
-      @extend .trans-size;
+      @extend %trans-size;
 
       .title {
-        @extend .t-title-4;
+        @extend %t-title-4;
         font-weight: 600;
         color: $gray-d2;
 
@@ -161,7 +161,7 @@
       }
 
       .copy {
-        @extend .t-copy-base;
+        @extend %t-copy-base;
         color: $gray;
 
         @include media($bp-m) {
@@ -194,7 +194,7 @@
           }
 
           [class^="icon"] {
-            @extend .t-icon-l;
+            @extend %t-icon-l;
             position: relative;
             top: ($baseline/10);
             margin-right: ($baseline/2);
@@ -202,15 +202,15 @@
         }
 
         .action-github {
-          @extend .btn-primary-blue;
+          @extend %btn-primary-blue;
         }
 
         .action-mailinglist {
-          @extend .btn-primary-pink;
+          @extend %btn-primary-pink;
         }
 
         .action-docs {
-          @extend .btn-primary-pink;
+          @extend %btn-primary-pink;
         }
       }
     }
@@ -252,7 +252,7 @@
     .content-projects {
 
       > .title {
-        @extend .t-title-8;
+        @extend %t-title-8;
         text-transform: uppercase;
         color: $gray-l3;
       }
@@ -285,14 +285,14 @@
     position: relative;
 
     .title {
-      @extend .trans-color;
-      @extend .t-title-4;
+      @extend %trans-color;
+      @extend %t-title-4;
       @include span-columns(12 of 12);
       font-weight: 600;
       color: $gray-d2;
 
       .name {
-        @extend .trans-size;
+        @extend %trans-size;
         @include span-columns(8 of 12);
 
         @include media($bp-m) {
@@ -304,7 +304,7 @@
       }
 
       .status {
-        @extend .t-copy-sub3;
+        @extend %t-copy-sub3;
         @include span-columns(4 of 12);
         text-align: right;
         text-transform: uppercase;
@@ -315,7 +315,7 @@
         }
 
         .label {
-          @extend .text-sr;
+          @extend %text-sr;
         }
 
         .value {
@@ -331,9 +331,9 @@
     }
 
     .copy {
-      @extend .trans-color;
-      @extend .trans-size;
-      @extend .t-copy-base;
+      @extend %trans-color;
+      @extend %trans-size;
+      @extend %t-copy-base;
       @include span-columns(8 of 12);
       color: $gray;
 
@@ -351,7 +351,7 @@
     }
 
     .resources {
-      @extend .trans-size;
+      @extend %trans-size;
       @include span-columns(4 of 12);
 
       @include media($bp-ds) {
@@ -363,7 +363,7 @@
       }
 
       .item {
-        @extend .t-copy-sub1;
+        @extend %t-copy-sub1;
 
         a {
           @include transition(background 0.25s ease-in-out);
@@ -385,7 +385,7 @@
             text-align: center;
 
             [class^="icon-"] {
-              @extend .t-icon-l;
+              @extend %t-icon-l;
               position: relative;
               top: ($baseline/5);
             }
@@ -543,7 +543,7 @@
     .content-supplementary {
 
       .title {
-        @extend .t-title-7;
+        @extend %t-title-7;
         margin-bottom: ($baseline/4);
         font-weight: 600;
         color: $gray-d2;
@@ -554,11 +554,11 @@
       }
 
       .copy {
-        @extend .t-copy-sub1;
+        @extend %t-copy-sub1;
       }
 
       .content-contact {
-        @extend .trans-size;
+        @extend %trans-size;
         @include fill-parent;
 
         .copy {
@@ -573,8 +573,8 @@
           }
 
           .item {
-            @extend .trans-size;
-            @extend .t-copy-sub1;
+            @extend %trans-size;
+            @extend %t-copy-sub1;
             @include span-columns(3 of 6);
             margin-bottom: ($baseline/2);
 
@@ -587,11 +587,11 @@
             }
 
             a {
-              @extend .btn-secondary;
+              @extend %btn-secondary;
               display: block;
 
               [class^="icon-"] {
-                @extend .t-icon-l;
+                @extend %t-icon-l;
                 margin-right: ($baseline/2);
               }
             }
@@ -602,7 +602,7 @@
       .list-content {
 
         [class^="content-"] {
-          @extend .trans-size;
+          @extend %trans-size;
           @include span-columns(4 of 12);
 
           @include media($bp-ds) {
@@ -633,8 +633,8 @@
       }
 
       .copyright {
-        @extend .trans-size;
-        @extend .t-copy-sub1;
+        @extend %trans-size;
+        @extend %t-copy-sub1;
         @include span-columns(3 of 12);
 
         @include media($bp-ds) {
@@ -649,8 +649,8 @@
       }
 
       nav.peripheral {
-        @extend .trans-size;
-        @extend .t-copy-sub1;
+        @extend %trans-size;
+        @extend %t-copy-sub1;
         @include span-columns(9 of 12);
         text-align: right;
 

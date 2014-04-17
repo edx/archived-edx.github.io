@@ -5,7 +5,7 @@
 nav {
 
   ol, ul {
-    @extend .no-list;
+    @extend %no-list;
   }
 
   .nav-item {
@@ -45,18 +45,18 @@ nav.primary {
 nav.secondary {
 
   &.horizontal {
-    @extend .nav-pill;
+    @extend %nav-pill !optional;
   }
 
   &.vertical {
-    @extend .nav-blocks;
+    @extend %nav-blocks !optional;
   }
 }
 
 // ====================
 
 nav.pagination {
-  @extend .nav-pill;
+  @extend %nav-pill !optional;
 }
 
 // ====================
