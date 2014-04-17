@@ -9,7 +9,7 @@ html {
 
 body {
   @include font-size(16);
-  @extend .t-copy;
+  @extend %t-copy;
 }
 
 [class|="content"], footer.primary {
@@ -30,7 +30,7 @@ body {
 
 // layout
 [class|="wrapper"] {
-  @extend .wrapper;
+  @extend %wrapper;
   padding: 0;
 
   > * {
@@ -39,10 +39,10 @@ body {
 }
 
 .sr, hr.divider {
-  @extend .text-sr;
+  @extend %text-sr;
 }
 
 // elements
 strong {
-  @extend .t-weight3;
+  @extend %t-weight3;
 }

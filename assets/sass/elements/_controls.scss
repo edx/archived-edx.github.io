@@ -2,7 +2,7 @@
 // ====================
 
 // buttons - extends
-.btn {
+%btn {
   @include box-sizing(border-box);
   @include transition(color 0.25s ease-in-out, border-color 0.25s ease-in-out, background 0.25s ease-in-out, box-shadow 0.25s ease-in-out);
   display: inline-block;
@@ -19,7 +19,7 @@
   }
 
   .icon-inline {
-    @extend .t-icon-inline;
+    @extend %t-icon-inline !optional;
     display: inline-block;
     vertical-align: middle;
     margin-right: ($baseline/4);
@@ -27,18 +27,18 @@
 }
 
 // pill button
-.btn-pill {
+%btn-pill {
   border-radius: $baseline/5;
 }
 
-.btn-rounded {
+%btn-rounded {
   border-radius: ($baseline/2);
 }
 
 // primary button
-.btn-primary {
-  @extend .btn;
-  @extend .btn-pill;
+%btn-primary {
+  @extend %btn;
+  @extend %btn-pill;
   padding:($baseline/2) $baseline;
   border-width: 1px;
   border-style: solid;
@@ -57,9 +57,9 @@
 }
 
 // secondary button
-.btn-secondary {
-  @extend .btn;
-  @extend .btn-pill;
+%btn-secondary {
+  @extend %btn;
+  @extend %btn-pill;
   border-width: 1px;
   border-style: solid;
   border-color: $gray-l4;
@@ -76,9 +76,9 @@
 }
 
 // secondary button
-.btn-tertiary {
-  @extend .btn;
-  @extend .btn-rounded;
+%btn-tertiary {
+  @extend %btn;
+  @extend %btn-rounded;
   border-width: 1px;
   border-style: solid;
   padding: ($baseline/4) ($baseline/2);
@@ -99,7 +99,7 @@
 
 // gray primary button
 .btn-primary-gray {
-  @extend .btn-primary;
+  @extend %btn-primary;
   background: $gray-l1;
   border-color: $gray-l2;
   color: $white;
@@ -120,8 +120,8 @@
 }
 
 // blue primary button
-.btn-primary-blue {
-  @extend .btn-primary;
+%btn-primary-blue {
+  @extend %btn-primary;
   background: $blue;
   border-color: $blue-s1;
   color: $white;
@@ -143,8 +143,8 @@
 }
 
 // pink primary button
-.btn-primary-pink {
-  @extend .btn-primary;
+%btn-primary-pink {
+  @extend %btn-primary;
   background: $pink;
   border-color: $pink-s1;
   color: $white;
@@ -166,8 +166,8 @@
 }
 
 // gray secondary button
-.btn-secondary-gray {
-  @extend .btn-secondary;
+%btn-secondary-gray {
+  @extend %btn-secondary;
   border-color: $gray-l3;
   color: $gray-l1;
 
@@ -187,8 +187,8 @@
 }
 
 // blue secondary button
-.btn-secondary-blue {
-  @extend .btn-secondary;
+%btn-secondary-blue {
+  @extend %btn-secondary;
   border-color: $blue-l3;
   color: $blue;
 
@@ -209,8 +209,8 @@
 }
 
 // pink secondary button
-.btn-secondary-pink {
-  @extend .btn-secondary;
+%btn-secondary-pink {
+  @extend %btn-secondary;
   border-color: $pink-l3;
   color: $pink-l1;
 
@@ -230,8 +230,8 @@
 }
 
 // pink tertiary button
-.btn-tertiary-pink {
-  @extend .btn-tertiary;
+%btn-tertiary-pink {
+  @extend %btn-tertiary;
   border-color: $gray-l4;
   color: $gray-l1;
 
