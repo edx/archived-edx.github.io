@@ -635,7 +635,7 @@
       .copyright {
         @extend %trans-size;
         @extend %t-copy-sub1;
-        @include span-columns(3 of 12);
+        @include span-columns(6 of 12);
 
         @include media($bp-ds) {
           @include fill-parent;
