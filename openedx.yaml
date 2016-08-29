@@ -5,4 +5,4 @@ nick: odo
 oeps: {}
 owner: edx/openedx-tooling
 track-pulls: true
-dead: true
+obsolete: true
