@@ -17,7 +17,7 @@ The static front end of this page/site is built with the following resources:
 
 The page/site relies on [Sass](http://sass-lang.com/) to compile its production CSS file ([assets/css/main.css](assets/css/main.css)). No CSS files should be directly edited because of this. Instead, all Sass partial files contained in assets/sass control presentation.
 
-To preview changes and compile Sass locally, you can use an existing workflow tool like [Grunt](), [Gulp](), or GUI  like [CodeKit]() or have a local copy of the Sass Ruby Gem watch the assets/sass directory for changes and compile them into ([assets/css/main.css](assets/css/main.css)). Here are basic instructions for that last option:
+To preview changes and compile Sass locally, you can use an existing workflow tool like [Grunt](http://gruntjs.com/), [Gulp](http://gulpjs.com/), or GUI  like [CodeKit](https://incident57.com/codekit/) or have a local copy of the Sass Ruby Gem watch the assets/sass directory for changes and compile them into ([assets/css/main.css](assets/css/main.css)). Here are basic instructions for that last option:
 
 **Install sass gem locally:**
 ```
